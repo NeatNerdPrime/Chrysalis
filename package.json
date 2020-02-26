@@ -43,7 +43,14 @@
       "target": [
         "AppImage"
       ]
-    }
+    },
+    "afterPack": "./build/afterPackHook.js",
+    "extraResources": [
+      {
+        "from": "./build/launcher.sh",
+        "to": "launcher.sh"
+      }
+    ]
   },
   "dependencies": {
     "@chrysalis-api/colormap": "^0.0.14",
